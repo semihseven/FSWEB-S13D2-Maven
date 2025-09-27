@@ -61,8 +61,10 @@ public class Main {
 
         for(int i=0;i<numString.length();i++) {
             int digit = numString.charAt(i) - '0';
-            result = result + words[digit] + " ";
-
+            result = result + words[digit];
+            if(i<numString.length()-1) {
+                result = result + " ";
+            }
         }
 
     return result;
