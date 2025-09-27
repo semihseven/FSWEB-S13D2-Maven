@@ -11,8 +11,12 @@ public class Main {
 
         //System.out.println(isPerfectNumber(6));
         //System.out.println(isPerfectNumber(28));
-        System.out.println(isPerfectNumber(5));
+        //System.out.println(isPerfectNumber(5));
         //System.out.println(isPerfectNumber(-1));
+
+        System.out.println(numberToWords(123));
+        System.out.println(numberToWords(1010));
+        System.out.println(numberToWords(-12));
 
     }
 
@@ -45,4 +49,21 @@ public class Main {
 
     }
 
-}
+    public static String numberToWords(int num) {
+
+        String[] words = {"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+        String numString = String.valueOf(num);
+        String result = "";
+
+        if (num < 0) {
+            return "Invalid Value";
+        }
+
+        for(int i=0;i<numString.length();i++) {
+            int digit = numString.charAt(i) - '0';
+            result = result + words[digit] + " ";
+
+        }
+
+    return result;
+    }}
